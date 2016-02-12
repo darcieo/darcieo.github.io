@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('media/troika.otf') format('opentype');
+}
+body {
+    font-family:sans-serif;
+    padding:10px;
+}
+h2{
+    font-family: MyFont;
+    font-weight: normal;
+    font-size:35px;
+    margin:0px;
+    padding:0px;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/*-----------------main layot-----------------*/
+#mainContent{
+    float:left;
+    width:560px;
+    #simulator{
+        position:relative;
+        width:550px;
+        height:550px;
+        border: 5px solid black;
+        @include border-radius(5px);
+        #messageDiv{
+            width:550px;
+            text-align:center;
+            margin-top: 250px;
+            font-size:50px;
+            z-index:2;
+        }
+    }
+}
+#secondaryContent{
+    float:left;
+    width:400px;
+    height:560px;
+    text-align: center;
+    padding:0 20px;
+    #title {
+        color:#bb4fbb;
+        padding-top:5px;
+        font-size:40px;
+    }
+    #instructions{
+        padding:15px 0;
+    }
+    #description{
+        padding:15px 0;
+        img{
+            width:80px;
+        }
+        #zombieDescr{
+            display:none;
+            &.up{
+                display:block;
+            }
+            h2{
+                color:#fa2b74;
+            }
+        }
+        #studentDescr{
+            display:none;
+            &.up{
+                display:block;
+            }
+            h2{
+                color:#60dbed;
+             }
+        }
+        #nurseDescr{
+            display:none;
+            &.up{
+                display:block;
+            }
+            h2{
+                color:#7bcc4c;
+            }
+        }
+        #officerDescr{
+            display:none;
+            &.up{
+                display:block;
+            }
+            h2{
+                color:#FFB334;
+            }
+        }
+    }
+    #statistics{
+        margin-top:95px;
+        ul{
+            list-style:none;
+            padding: 0px;
+            margin:10px;
+            li {
+                padding:2px;
+                img{
+                    width:20px;
+                }
+            }
+        }
+    }
+}
+
+/*-----------------buttons-----------------*/
+button {
+    @include border-radius(5px);
+    width:150px;
+    background:white;
+    font-family:Verdana;
+    font-weight:500;
+    font-size:16px;
+    padding:5px;
+    margin:2px;
+    cursor:pointer;
+}
+#buttons{
+    padding-top:10px 0px;
+    #zombieButton{
+        border: 1px solid #fa2b74;
+        color: #fa2b74;
+    }
+    #zombieButton:hover {
+        background: #fa2b74;
+        color: white;
+    }
+    #studentButton{
+        border: 1px solid #60dbed;
+        color: #60dbed;
+    }
+    #studentButton:hover {
+        background: #60dbed;
+        color: white;
+    }
+    #nurseButton{
+        border: 1px solid #7bcc4c;
+        color: #7bcc4c;
+    }
+    #nurseButton:hover {
+        background: #7bcc4c;
+        color: white;
+    }
+    #officerButton{
+        border: 1px solid #FFB334;
+        color: #FFB334;
+    }
+    #officerButton:hover {
+        background: #FFB334;
+        color: white;
+    }
+    #clearButton {
+        border: 1px solid #bb4fbb;
+        color: #bb4fbb;
+    }
+    #clearButton:hover {
+        background: #bb4fbb;
+        color:white;
+    }
+}
+input[type=button]{
+    font-family: MyFont;
+    font-size:35px;
+    width: 300px;
+    padding:10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background:white;
+    margin-top:10px;
+    outline:none;
+}
+input[type=button]:hover{
+    border-color: #bb4fbb;
+    background:#bb4fbb;
+    color:white;
+    cursor: pointer;
+}
+#againButton {
+    border: 1px solid #60dbed;
+    background: #60dbed;
+    color: white;
+    display:none;
+}
+#againButton:hover {
+    background:white;
+    color: #60dbed;
+}
+/*-----------------icons-----------------*/
+.character {
+    width: 100%;
+}
+#nurse {
+    margin-top: -5px;
+    position: relative;
+}
+#antidoteCount {
+    font-size:14px;
+    font-weight:bold;
+    color:#7BBF6A;
+    text-align:right;
+    padding:0;
+    margin:0;
+    margin-top:-12px;
+}
+#healthBar {
+    border: 2px solid #FFB334;
+    border-radius: 5px;
+    width:36px;
+    height:6px;
+    margin-top:-14px;
+}
+#health1 {
+    width:12px;
+    height:6px;
+    background:#fa2b74;
+    float:left;
+}
+#health2 {
+    width:12px;
+    height:6px;
+    background:#fa2b74;
+    float:left;
+}
+#health3 {
+    width:12px;
+    height:6px;
+    background:#fa2b74;
+    float:left;
+}
+#footer{
+    clear:both;
+    width:100%;
+    font-size:12px;
+}
+#footer img{
+    margin-top:5px;
+    width:25px;
+    cursor:pointer;
+}
+#gitLink {
+    content: url('media/github.png');
+}
+#gitLink:hover {
+    content: url('media/githubH.png');
+}
+#iconsLink {
+    content: url('media/icons.png');
+}
+#iconsLink:hover {
+    content: url('media/iconsH.png');
+}
