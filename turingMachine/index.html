@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TM</title>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src='tm.js'></script>
+</head>
+<body>
+
+<h1>Turing's Assembler</h1>
+
+<a style='float:right' href='https://github.com/darcieo/turingMachine'><img id='gitLink' /></a>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#sectionMain">Main</a></li>
+    <li><a href="#sectionB">Project Instructions</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="sectionMain" class="tab-pane fade in active">
+
+        <div class='row'> 
+        	<div class="col-sm-4 col-md-3">
+        	    <label>Turing Machine Program</label>
+        	    <input type='file' id='userFile'>
+        	</div>
+
+            <div class="col-sm-8 col-md-9">
+                <div class='arrow-left' id='fileArrow'></div>
+        		<div class='error' id="fileError"><p>Please choose a file</p></div>
+    		</div>
+    	</div>
+					
+		<div class='row'> 
+            <div class="col-sm-4 col-md-3">
+        	    <label>Word</label>
+        	    <input type='text' id='userWord'>
+            </div>
+
+        	<div class="col-sm-8 col-md-9">
+        	    <div class='arrow-left' id='wordArrow'></div>
+        	    <div class='error' id='wordError'><p>Please enter a word</p></div>
+    		</div>
+        </div>
+
+    	<div class='row'>
+            <div class="col-sm-12 col-md-12">
+                <input type='button' id='submitButton' value='Submit'>
+        	</div>
+        </div>
+
+        <div class='row'>
+            <div id='errorBox' class="col-sm-12 col-md-12">
+                <h3>Error</h3>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class="col-sm-12 col-md-12">
+                <div id='states'>
+                    <h3 id='h3'>Machine States</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+			
+    <div id="sectionB" class="tab-pane fade">
+       	<div id='pdf'>
+           	<embed src="media/project2.pdf" type='application/pdf'>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
