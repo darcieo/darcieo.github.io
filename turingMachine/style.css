@@ -1,0 +1,88 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    padding: 20px 30px; }
+    html body h1 {
+      padding-bottom: 10px; }
+    html body img {
+      width: 30px; }
+    html body #gitLink {
+      content: url("media/github.png"); }
+    html body #gitLink:hover {
+      content: url("media/githubH.png"); }
+    html body .tab-content {
+      height: 100%; }
+      html body .tab-content .row {
+        margin-top: 30px;
+        width: 90%; }
+        html body .tab-content .row .arrow-left {
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          transition: 0.5s all;
+          opacity: 0;
+          float: left;
+          width: 0;
+          height: 0;
+          border-top: 10px solid transparent;
+          border-right: 20px solid #6bbf20;
+          border-bottom: 10px solid transparent;
+          margin-left: 10px; }
+          html body .tab-content .row .arrow-left.show {
+            opacity: 1; }
+        html body .tab-content .row .error {
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          transition: 0.5s all;
+          opacity: 0;
+          float: left;
+          height: 50px;
+          background: #6bbf20;
+          margin-top: -15px;
+          padding: 15px 10px;
+          color: white; }
+          html body .tab-content .row .error.show {
+            opacity: 1; }
+        html body .tab-content .row #submitButton {
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          transition: 0.5s all;
+          opacity: .6;
+          border: 2px solid #6bbf20;
+          background: #6bbf20;
+          color: white; }
+          html body .tab-content .row #submitButton.ready {
+            opacity: 1; }
+        html body .tab-content .row #errorBox {
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          transition: 0.5s all;
+          opacity: 0;
+          border-radius: 5px; }
+          html body .tab-content .row #errorBox.show {
+            opacity: 1; }
+          html body .tab-content .row #errorBox h3 {
+            color: #6bbf20;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 5px; }
+        html body .tab-content .row #states {
+          -webkit-transition: 0.5s all;
+          -moz-transition: 0.5s all;
+          transition: 0.5s all;
+          opacity: 0;
+          margin-top: -50px;
+          background: white; }
+          html body .tab-content .row #states.display {
+            opacity: 1; }
+      html body .tab-content #sectionB {
+        height: 100%; }
+        html body .tab-content #sectionB #pdf {
+          margin: 20px auto;
+          width: 80%;
+          height: 100%; }
+          html body .tab-content #sectionB #pdf embed {
+            width: 100%;
+            height: 80%; }
+
+/*# sourceMappingURL=style.css.map */

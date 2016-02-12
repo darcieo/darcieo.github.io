@@ -1,0 +1,100 @@
+@import 'bourbon/bourbon';
+
+html{
+	height:100%;
+	body{
+		height: 100%;
+		padding:20px 30px;
+		h1{
+			padding-bottom:10px;
+		}
+		img{
+    		width:30px;
+		}
+		#gitLink {
+    		content: url('media/github.png');
+		}
+		#gitLink:hover {
+    		content: url('media/githubH.png');
+		}
+		.tab-content{
+			height:100%;
+			.row{
+				margin-top:30px;
+				width:90%;
+				.arrow-left {
+					@include transition(0.5s all);
+    				opacity: 0;
+    				float:left;
+					width: 0;
+    				height: 0;
+    				border-top: 10px solid transparent;
+    				border-right: 20px solid #6bbf20;
+    				border-bottom: 10px solid transparent;
+    				margin-left:10px;
+    				&.show{
+    					opacity:1;
+    				}
+				}
+				.error{
+					@include transition(0.5s all);
+    				opacity: 0;
+    				float:left;
+    				height: 50px;
+    				background:#6bbf20;
+    				margin-top:-15px;
+    				padding:15px 10px;
+    				color:white;
+    				&.show{
+    					opacity:1;
+    				}
+				}
+				#submitButton{
+					@include transition(0.5s all);
+    				opacity: .6;
+					border: 2px solid #6bbf20;
+					background: #6bbf20;
+					color:white;
+    				&.ready{
+    					opacity:1;
+    				}
+				}	
+				#errorBox{
+					@include transition(0.5s all);
+					opacity:0;
+					border-radius: 5px;
+					&.show{
+    					opacity:1;
+    				}
+    				h3{
+						color:#6bbf20;
+						margin:0;
+						padding:0;
+						padding-bottom:5px;
+					}
+				}
+				#states{
+					@include transition(0.5s all);
+					opacity:0;
+					margin-top: -50px;
+					background:white;
+					&.display{
+						opacity:1;
+					}
+				}			
+			}
+			#sectionB{
+				height:100%;
+				#pdf{
+    				margin: 20px auto;
+					width:80%;
+					height:100%;
+					embed{
+					width:100%;
+					height:80%;
+					}
+				}
+			}			
+		}
+	}
+}
