@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zombie Simulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="mainContent">
+        <div id="simulator">
+            <h2 id="messageDiv"></h2>
+        </div>
+    </div>
+
+    <div id="secondaryContent">
+        <h2 id="title">Zombie Simulator</h2>
+
+        <div id="instructions">
+            Simulate a zombie apocalypse! Add characters by clicking the buttons below. Hover over buttons to see character descriptions. Click the start button to begin simulation!
+        </div>
+
+        <div id="buttons">
+            <button onclick="newZombie()" id="zombieButton">Add Zombie</button>
+            <button onclick="newStudent()" id="studentButton">Add Student</button>
+            <button onclick="newNurse()" id="nurseButton">Add Nurse</button>
+            <button onclick="newOfficer()" id="officerButton">Add Officer</button>
+            <button onclick="clearAll()" id="clearButton">Clear</button>
+        </div>
+        
+        <input onclick="startStop()" type="button" id="startStop" value="START" />
+        <input onclick="location.reload()" type="button" id="againButton" value="Go Again!" />
+
+        <div id="description">
+            <div id="zombieDescr">
+                <img src="media/zombie.png"/>
+                <h2>ZOMBIE</h2>
+                Upon contact, zombies infect students, nurses who have run out of antidote, and officers who have exhausted their health. Infected characters turn into zombies immediately.
+            </div>
+
+            <div id="studentDescr">
+                <img src="media/student.png"/>
+                <h2>STUDENT</h2>
+                Upon contact with a zombie, students are infected and turned into zombies. If a student survives 5 seconds without being infected, the student will learn to fight or heal. The student will then turn into an officer or a nurse.
+            </div>
+
+            <div id="nurseDescr">
+                <img src="media/nurse.png"/>
+                <h2>Nurse</h2>
+                Nurses start with 3 doses of antidote. Upon contact with a zombie, they will use one dose of antidote to turn the zombie back into its human form. If a nurse is out of antidote upon encounter with a zombie, the nurse will be infected and turned into a zombie.
+            </div>
+
+            <div id="officerDescr">
+                <img src="media/officer.png"/>
+                <h2>POLICE OFFICER</h2>
+                Officers destroy zombies upon contact. However, each encounter will lower their health. When an officer's health is exhausted, they are susceptible to infection. When an officer with no health encounters a zombie, the officer is infected and turned into a zombie.
+            </div>
+        </div>
+
+        <div id="statistics">
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <a href="https://github.com/darcieo/zombieSimulator"><img id="gitLink" /></a>
+        <a href="http://www.iconsdb.com"><img id="iconsLink" /></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="zombieSimulator.js"></script>
+
+</body>
+</html>
